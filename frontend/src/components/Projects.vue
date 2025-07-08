@@ -20,6 +20,7 @@
                 >{{ t }}</span
               >
             </div>
+            
             <a
               :href="project.link"
               target="_blank"

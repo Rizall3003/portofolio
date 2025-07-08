@@ -11,24 +11,34 @@
       </a>
       <div class="flex justify-center space-x-6 mb-8">
         <a
-          href="#"
-          target="_blank"
-          class="text-gray-400 hover:text-white transition-colors duration 300"
-          >GitHub</a
+          href="https://github.com/Rizall3003"
+          target="_github"
+          class="text-gray-400 hover:text-white transition-colors duration-300 text-2xl"
         >
+          <i class="bi bi-github"></i>
+        </a>
         <a
-          href="#"
+          href="https://www.linkedin.com/in/rizal-anggoro-a91535264"
           target="_blank"
-          class="text-gray-400 hover:text-white transition-colors duration 300"
-          >LinkedIn</a
+          class="text-gray-400 hover:text-white transition-colors duration-300 text-2xl"
         >
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/rzalnggr_"
+          target="_blank"
+          class="text-gray-400 hover:text-white transition-colors duration-300 text-2xl"
+        >
+          <i class="bi bi-instagram"></i>
+        </a>
       </div>
       <p class="text-gray-500">
-        &copy; {{ new Date().getFullYear() }} Nama Mahasiswa. Dibuat dengan
+        &copy; {{ new Date().getFullYear() }} Rizal Anggoro. Dibuat dengan
       </p>
     </div>
   </footer>
 </template>
+
 <script setup>
 import SectionTitle from './SectionTitle.vue'
 </script>
