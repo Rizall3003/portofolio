@@ -22,7 +22,9 @@
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 import SectionTitle from './SectionTitle.vue'
+
 const skills = ref([])
+
 const getBgColor = (level) => {
   switch (level.toLowerCase()) {
     case 'mahir':
@@ -33,13 +35,14 @@ const getBgColor = (level) => {
       return 'bg-white'
   }
 }
+
 onMounted(async () => {
   try {
-    const response = await axios.get('/api/skills');
-    educationHistory.value = response.data;
+    const response = await axios.get('/api/skills')
+    skills.value = response.data // ✅ PERBAIKAN DI SINI
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
-});
-
+})
 </script>
+
