@@ -38,7 +38,7 @@ const getBgColor = (level) => {
 
 onMounted(async () => {
   try {
-    const response = await axios.get('/api/skills')
+    const response = await axios.get('https://portofolio-bay-nu.vercel.app/api/skills')
     skills.value = response.data // ✅ PERBAIKAN DI SINI
   } catch (error) {
     console.error(error)
