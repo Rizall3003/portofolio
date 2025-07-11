@@ -2,10 +2,10 @@
   <section id="profil" class="container mx-auto px-6 py-20 flex flex-col md:flex-row items-center">
     <div class="md:w-1/2 mb-10 md:mb-0">
       <h1
-        class="text-5xl font-bold text-gray-800 mb-4 animate-slide-in-left"
+        class="text-7xl font-extrabold text-gray-900 mb-6 leading-tight drop-shadow-lg animate-slide-in-left"
         style="animation-delay: 200ms"
       >
-        Halo, Saya <span class="text-blue-600">Rizal Anggoro</span>
+        Halo, Saya <span class="text-indigo-700">Rizal Anggoro</span>
       </h1>
       <p class="text-xl text-gray-600 mb-8 animate-slide-in-left" style="animation-delay: 400ms">
         Mahasiswa Teknik Informatika yang bersemangat dalam pengembangan web dan desain antarmuka.

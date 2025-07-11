@@ -1,7 +1,7 @@
 <template>
   <section id="skill" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
-      <SectionTitle title="Keahlian & Teknologi" />
+      <SectionTitle title="KEAHLIAN" />
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
         <div
           v-for="skill in skills"

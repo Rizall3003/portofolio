@@ -1,7 +1,7 @@
 <template>
   <section id="pendidikan" class="py-20 bg-white">
     <div class="container mx-auto px-6">
-      <SectionTitle title="Riwayat Pendidikan" />
+      <SectionTitle title="PENDIDIKAN" />
       <div class="relative">
         <div class="absolute h-full border-r-2 border-gray-300" style="left: 50%"></div>
         <div
