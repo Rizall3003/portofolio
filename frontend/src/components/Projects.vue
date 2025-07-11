@@ -1,5 +1,5 @@
 <template>
-  <section id="proyek" class="py-20 bg-white">
+  <section id="proyek" class="py-20 bg-gradient-to-r from-blue-100 via-blue-50 to-green-100 min-h-screen font-sans">
     <div class="container mx-auto px-6">
       <SectionTitle title="PROYEK" />
       <div class="grid md:grid-cols-2 gap-12">

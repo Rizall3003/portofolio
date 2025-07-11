@@ -1,5 +1,5 @@
 <template>
-  <section id="skill" class="py-20 bg-gray-50">
+  <section id="skill" class="py-20 bg-gradient-to-r from-green-100 via-blue-50 to-blue-100 min-h-screen font-sans">
     <div class="container mx-auto px-6">
       <SectionTitle title="KEAHLIAN" />
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
