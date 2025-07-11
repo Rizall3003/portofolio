@@ -35,10 +35,11 @@ const getBgColor = (level) => {
 }
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:3000/api/skills')
-    skills.value = response.data
+    const response = await axios.get('/api/skills');
+    educationHistory.value = response.data;
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-})
+});
+
 </script>
