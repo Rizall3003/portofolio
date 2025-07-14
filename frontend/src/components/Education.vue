@@ -6,14 +6,16 @@
     <div class="container mx-auto px-6">
       <SectionTitle title="PENDIDIKAN" />
       <div class="relative">
+        <!-- Garis timeline hanya muncul di desktop -->
         <div
           class="absolute hidden md:block h-full border-r-2 border-gray-300"
           style="left: 50%"
         ></div>
+
         <div
           v-for="(edu, index) in educationHistory"
           :key="edu.id"
-          class="mb-8 w-full"
+          class="mb-8 md:mb-12 w-full"
         >
           <div
             :class="[
@@ -21,25 +23,28 @@
               index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
             ]"
           >
-            <div class="w-full md:w-1/2 md:pr-8 flex justify-end md:justify-end">
+            <!-- Box Education -->
+            <div class="w-full md:w-1/2 md:pr-8 flex justify-center md:justify-end">
               <div
-                class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition duration-300 flex items-center gap-4 w-full max-w-md"
+                class="bg-white rounded-xl shadow-lg p-4 md:p-6 hover:shadow-2xl transition duration-300 flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full md:max-w-md"
               >
                 <img :src="edu.logo" class="w-16 h-16 object-contain" />
                 <div
-                  :class="index % 2 === 0 ? 'text-right' : 'text-left'"
+                  :class="index % 2 === 0 ? 'text-right md:text-right' : 'text-left md:text-left'"
                   class="w-full"
                 >
-                  <p class="text-sm font-semibold text-blue-600 mb-1">
+                  <p class="text-xs md:text-sm font-semibold text-blue-600 mb-1">
                     {{ edu.period }}
                   </p>
-                  <h3 class="text-2xl font-bold text-gray-800 mb-1">
+                  <h3 class="text-lg md:text-2xl font-bold text-gray-800 mb-1">
                     {{ edu.institution }}
                   </h3>
-                  <p class="text-gray-600">{{ edu.major }}</p>
+                  <p class="text-gray-600 text-xs md:text-base">{{ edu.major }}</p>
                 </div>
               </div>
             </div>
+
+            <!-- Dot timeline (hilang di mobile) -->
             <div class="hidden md:flex w-1/2 justify-start md:justify-start">
               <div class="w-4 h-4 bg-blue-600 rounded-full z-10"></div>
             </div>
