@@ -5,8 +5,9 @@
   >
     <div class="container mx-auto px-6">
       <SectionTitle title="PENDIDIKAN" />
+
       <div class="relative">
-        <!-- Garis timeline hanya muncul di desktop -->
+        <!-- Garis timeline hanya di desktop -->
         <div
           class="absolute hidden md:block h-full border-r-2 border-gray-300"
           style="left: 50%"
@@ -24,13 +25,22 @@
             ]"
           >
             <!-- Box Education -->
-            <div class="w-full md:w-1/2 md:pr-8 flex justify-center md:justify-end">
+            <div
+              class="w-full md:w-1/2 md:pr-8 flex justify-center md:justify-end"
+            >
               <div
-                class="bg-white rounded-xl shadow-lg p-4 md:p-6 hover:shadow-2xl transition duration-300 flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full md:max-w-md"
+                class="bg-white rounded-xl shadow-lg p-4 md:p-6 hover:shadow-2xl transition duration-300 flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full md:max-w-md mx-auto"
               >
-                <img :src="edu.logo" class="w-16 h-16 object-contain" />
+                <img
+                  :src="edu.logo"
+                  class="w-16 h-16 object-contain"
+                  alt="Logo Institusi"
+                />
                 <div
-                  :class="index % 2 === 0 ? 'text-right md:text-right' : 'text-left md:text-left'"
+                  :class="index % 2 === 0
+                    ? 'text-center md:text-right'
+                    : 'text-center md:text-left'
+                  "
                   class="w-full"
                 >
                   <p class="text-xs md:text-sm font-semibold text-blue-600 mb-1">
@@ -39,7 +49,9 @@
                   <h3 class="text-lg md:text-2xl font-bold text-gray-800 mb-1">
                     {{ edu.institution }}
                   </h3>
-                  <p class="text-gray-600 text-xs md:text-base">{{ edu.major }}</p>
+                  <p class="text-gray-600 text-xs md:text-base">
+                    {{ edu.major }}
+                  </p>
                 </div>
               </div>
             </div>
@@ -71,3 +83,15 @@ onMounted(async () => {
   }
 })
 </script>
+
+<style scoped>
+.fade-enter-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from {
+  opacity: 0;
+}
+.fade-enter-to {
+  opacity: 1;
+}
+</style>
