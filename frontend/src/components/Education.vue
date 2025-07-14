@@ -7,29 +7,33 @@
       <SectionTitle title="PENDIDIKAN" />
 
       <div class="relative">
-        <!-- Garis timeline hanya di desktop -->
+        <!-- Timeline vertical line -->
         <div
-          class="absolute hidden md:block h-full border-r-2 border-gray-300"
-          style="left: 50%"
+          class="absolute hidden md:block top-0 bottom-0 left-1/2 border-l-2 border-gray-300"
         ></div>
 
         <div
           v-for="(edu, index) in educationHistory"
           :key="edu.id"
-          class="mb-8 md:mb-12 w-full"
+          class="mb-8 md:mb-12 w-full relative"
         >
           <div
             :class="[
-              'flex flex-col md:flex-row justify-between items-center w-full',
+              'flex flex-col md:flex-row w-full items-center',
               index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
             ]"
           >
-            <!-- Box Education -->
+            <!-- Card box -->
             <div
-              class="w-full md:w-1/2 md:pr-8 flex justify-center md:justify-end"
+              class="w-full md:w-1/2 md:px-8 flex justify-center md:justify-end relative"
             >
+              <!-- Dot timeline: absolute center in box -->
               <div
-                class="bg-white rounded-xl shadow-lg p-4 md:p-6 hover:shadow-2xl transition duration-300 flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 w-full md:max-w-md mx-auto"
+                class="hidden md:block absolute left-full top-1/2 -translate-y-1/2 translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full z-10"
+              ></div>
+
+              <div
+                class="bg-white rounded-xl shadow-lg p-4 md:p-6 hover:shadow-2xl transition duration-300 flex flex-col md:flex-row items-center gap-2 md:gap-4 w-full md:max-w-md"
               >
                 <img
                   :src="edu.logo"
@@ -56,10 +60,8 @@
               </div>
             </div>
 
-            <!-- Dot timeline (hilang di mobile) -->
-            <div class="hidden md:flex w-1/2 justify-start md:justify-start">
-              <div class="w-4 h-4 bg-blue-600 rounded-full z-10"></div>
-            </div>
+            <!-- Spacer div for opposite side to push timeline center -->
+            <div class="hidden md:block w-1/2"></div>
           </div>
         </div>
       </div>
