@@ -7,7 +7,7 @@
       <SectionTitle title="PENDIDIKAN" />
 
       <div class="relative">
-        <!-- Timeline vertical line -->
+        <!-- Vertical timeline line -->
         <div
           class="absolute hidden md:block top-0 bottom-0 left-1/2 border-l-2 border-gray-300"
         ></div>
@@ -24,12 +24,14 @@
             ]"
           >
             <!-- Card box -->
-            <div
-              class="w-full md:w-1/2 md:px-8 flex justify-center md:justify-end relative"
-            >
-              <!-- Dot timeline: absolute center in box -->
+            <div class="w-full md:w-1/2 md:px-8 flex justify-center md:justify-end relative">
+              
+              <!-- DOT timeline (absolute center) -->
               <div
-                class="hidden md:block absolute left-full top-1/2 -translate-y-1/2 translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full z-10"
+                class="hidden md:block absolute top-1/2 w-4 h-4 bg-blue-600 rounded-full z-10"
+                :class="index % 2 === 0
+                  ? '-right-8 translate-y-[-50%]'
+                  : '-left-8 translate-y-[-50%]'"
               ></div>
 
               <div
@@ -60,7 +62,7 @@
               </div>
             </div>
 
-            <!-- Spacer div for opposite side to push timeline center -->
+            <!-- Spacer div supaya flex di opposite side -->
             <div class="hidden md:block w-1/2"></div>
           </div>
         </div>
@@ -85,15 +87,3 @@ onMounted(async () => {
   }
 })
 </script>
-
-<style scoped>
-.fade-enter-active {
-  transition: opacity 0.5s ease;
-}
-.fade-enter-from {
-  opacity: 0;
-}
-.fade-enter-to {
-  opacity: 1;
-}
-</style>
